@@ -1,0 +1,124 @@
+/* filename: styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#gameContainer {
+    text-align: center;
+}
+
+#gameCanvas {
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+#gameInfo {
+    margin-bottom: 10px;
+}
+
+#cardSection {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+#gunCards, #actionCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.card button {
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#startScreen, #gameOverScreen {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#startScreen h1, #gameOverScreen h2 {
+    margin-top: 0;
+}
+
+#startScreen ul {
+    text-align: left;
+    margin: 20px 0;
+}
+
+/* New styles for gun cards */
+.gun-card {
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    width: 200px; /* Increased width for more information */
+}
+
+.gun-card.selected {
+    border-color: #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.gun-card h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.gun-card p {
+    color: #666;
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+.gun-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+.gun-card button:hover {
+    background-color: #45a049;
+}

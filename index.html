@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turret Defense Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="startScreen">
+            <h1>Turret Defense Game</h1>
+            <h2>Instructions</h2>
+            <ul>
+                <li>Use your mouse to aim and click to shoot</li>
+                <li>Press 1-4 to switch weapons</li>
+                <li>Use action cards for special abilities</li>
+                <li>Survive as many waves as possible!</li>
+            </ul>
+            <button id="startButton">Start Game</button>
+        </div>
+
+        <div id="gameScreen" style="display: none;">
+            <div id="gameInfo">
+                Level: <span id="levelDisplay">1</span>
+                Wave: <span id="waveDisplay">1</span>
+                Score: <span id="scoreDisplay">0</span>
+                Enemies Killed: <span id="enemiesKilledDisplay">0</span>
+                Current Weapon: <span id="currentWeaponDisplay"></span>
+            </div>
+
+            <div id="cardSection">
+                <div id="gunCards">
+                    <!-- Gun cards will be dynamically inserted here -->
+                </div>
+                <div id="actionCards">
+                    <!-- Action cards will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <div id="gameOverScreen" style="display: none;">
+            <h2>Game Over</h2>
+            <p>Your Score: <span id="finalScore"></span></p>
+            <p>Enemies Killed: <span id="finalEnemiesKilled"></span></p>
+            <button id="restartButton">Restart Game</button>
+        </div>
+    </div>
+    <script src="actionCards.js" type="module"></script>
+    <script src="game.js" type="module"></script>
+</body>
+</html>
